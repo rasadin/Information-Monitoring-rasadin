@@ -6,40 +6,58 @@
     <title>Gauge Test</title>
     <link rel="stylesheet" href="../fonts/fonts.css">
     <script src="../gauge.min.js"></script>
+	
+<style>
+.button {
+    background-color: blue;
+	border: none;
+    color: white;
+    padding: 6px 3px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 4px 2px;
+    cursor: pointer;
+	}
+</style>
 </head>
-<body style="background: #222">
+<body style="background: #FFFFFF">
 
-<center><h2 style= "color:#00ff00">Water Quality Monitoring System</h2></center><hr>
+<center><h2 style= "color:#4B0082">Water Quality Monitoring System</h2></center><hr>
 
 
 
 <center>
 <canvas data-type="linear-gauge"
         data-width="200"
-        data-height="280"
-        data-border-radius="20"
+        data-height="275"
+        data-border-radius="40"
         data-borders="true"
-        data-bar-stroke-width="20"
+        data-bar-stroke-width="10"
         data-minor-ticks="10"
-        data-major-ticks="0,10,20,30,40,50,60,70,80,90,100,Temp C"
-        data-color-numbers="red,#ccc,#ccc,#ccc,#ccc,#ccc,#ccc,#ccc,#ccc,#ccc,#ccc,red"
-        data-color-major-ticks="red,#ccc,#ccc,ccc,#ccc,#ccc,#ccc,#ccc,#ccc,#ccc,#ccc,red"
+        data-major-ticks="0,10,20,30,40,50,60,70,80,90,100"
+        data-color-numbers="red,red,red,red,red,red,red,red,red,red,red"
+        data-color-major-ticks="blue,blue,blue,blue,blue,blue,blue,blue,blue,blue,blue"
         data-color-bar-stroke="#444"
         data-value="22.3"
-        data-units="°C"
-        data-color-value-box-shadow="false"
+        data-units="Temp C"
+        data-color-value-box-shadow="#ccc"
         data-tick-side="left"
         data-number-side="left"
         data-needle-side="left"
         data-animate-on-init="true"
         data-color-plate="transparent"
-        data-font-value-size="45"
+        data-font-value-size="17"
+		data-title="false"
+		data-color-units="#FF00FF"
+		
 ></canvas>
 <canvas data-type="radial-gauge"
         data-width="300"
-        data-height="245"
-        data-units="UV METER"
-        data-title="false"
+        data-height="235"
+        data-units="UV unit"
+        data-title="UV METER"
         data-value="33.77"
         data-animate-on-init="true"
         data-animated-value="true"
@@ -49,18 +67,18 @@
         data-minor-ticks="2"
         data-stroke-ticks="false"
         data-highlights='[
-            { "from": 0, "to": 50, "color": "rgba(0,255,0,.15)" },
-            { "from": 50, "to": 100, "color": "rgba(255,255,0,.15)" },
-            { "from": 100, "to": 150, "color": "rgba(255,30,0,.25)" },
-            { "from": 150, "to": 200, "color": "rgba(255,0,225,.25)" },
-            { "from": 200, "to": 220, "color": "rgba(0,0,255,.25)" }
+            { "from": 0, "to": 50, "color": "RGB(0, 0, 128)" },
+            { "from": 50, "to": 100, "color": "RGB(128, 0, 128)" },
+            { "from": 100, "to": 150, "color": "RGB(255, 0, 255)" },
+            { "from": 150, "to": 200, "color": "RGB(0, 128, 0)" },
+            { "from": 200, "to": 220, "color": "RGB(128, 0, 0)" }
         ]'
         data-color-plate="transparent"
         data-color-major-ticks="#f5f5f5"
         data-color-minor-ticks="#ddd"
-        data-color-title="#fff"
-        data-color-units="#ccc"
-        data-color-numbers="#eee"
+        data-color-title="#186A3B"
+        data-color-units="blue"
+        data-color-numbers="red"
         data-color-needle-start="rgba(240, 128, 128, 1)"
         data-color-needle-end="rgba(255, 160, 122, .9)"
         data-value-box="true"
@@ -73,60 +91,23 @@
 ></canvas>
 
 <canvas data-type="radial-gauge"
-        data-width="300"
-        data-height="245"
-        data-units="NTU"
+        data-value="-20"
+    	data-width="300"
+        data-height="235"
+		data-units="NTU"
         data-title="Turbidity Meter"
-        data-min-value="-50"
-        data-max-value="50"
-        data-major-ticks="[-50,-40,-30,-20,-10,0,10,20,30,40,50]"
-        data-minor-ticks="2"
-        data-stroke-ticks="true"
-        data-highlights='[
-                    {"from": -50, "to": 0, "color": "rgba(0,0, 255, .3)"},
-                    {"from": 0, "to": 50, "color": "rgba(255, 0, 0, .3)"}
-                ]'
-        data-ticks-angle="225"
-        data-start-angle="67.5"
-        data-color-major-ticks="#ddd"
-        data-color-minor-ticks="#ddd"
-        data-color-title="#eee"
-        data-color-units="#ccc"
-        data-color-numbers="#eee"
-        data-color-plate="#222"
-        data-border-shadow-width="0"
-        data-borders="true"
-        data-needle-type="arrow"
-        data-needle-width="2"
-        data-needle-circle-size="7"
-        data-needle-circle-outer="true"
-        data-needle-circle-inner="false"
-        data-animation-duration="1500"
-        data-animation-rule="linear"
-        data-color-border-outer="#333"
-        data-color-border-outer-end="#111"
-        data-color-border-middle="#222"
-        data-color-border-middle-end="#111"
-        data-color-border-inner="#111"
-        data-color-border-inner-end="#333"
-        data-color-needle-shadow-down="#333"
-        data-color-needle-circle-outer="#333"
-        data-color-needle-circle-outer-end="#111"
-        data-color-needle-circle-inner="#111"
-        data-color-needle-circle-inner-end="#222"
-        data-value-box-border-radius="0"
-        data-color-value-box-rect="#222"
-        data-color-value-box-rect-end="#333"
-        data-font-value="Led"
-        data-font-numbers="Led"
-        data-font-title="Led"
-        data-font-units="Led"
+        data-height="400"
+        data-bar-width="10"
+        data-bar-shadow="5"
+        data-color-bar-progress="rgba(50,200,50,.75)"
+		data-color-title="blue"
+        data-color-units="red"
 ></canvas>
 <canvas data-type="radial-gauge"
         data-width="300"
-        data-height="245"
-        data-units="PH METER"
-        data-title="false"
+        data-height="235"
+        data-units="PH unit"
+        data-title="PH METER"
         data-value="33.77"
         data-animate-on-init="true"
         data-animated-value="true"
@@ -136,18 +117,18 @@
         data-minor-ticks="2"
         data-stroke-ticks="false"
         data-highlights='[
-            { "from": 0, "to": 50, "color": "rgba(0,255,0,.15)" },
-            { "from": 50, "to": 100, "color": "rgba(255,255,0,.15)" },
-            { "from": 100, "to": 150, "color": "rgba(255,30,0,.25)" },
-            { "from": 150, "to": 200, "color": "rgba(255,0,225,.25)" },
-            { "from": 200, "to": 220, "color": "rgba(0,0,255,.25)" }
+            { "from": 0, "to": 50, "color": "rgb(107,142,35)" },
+            { "from": 50, "to": 100, "color": "rgb(91, 44, 111)" },
+            { "from": 100, "to": 150, "color": "rgba(120, 40, 31)" },
+            { "from": 150, "to": 200, "color": "rgba(11, 83, 69)" },
+            { "from": 200, "to": 220, "color": "rgba(0, 0, 128)" }
         ]'
         data-color-plate="transparent"
         data-color-major-ticks="#f5f5f5"
         data-color-minor-ticks="#ddd"
-        data-color-title="#fff"
-        data-color-units="#ccc"
-        data-color-numbers="#eee"
+        data-color-title="#4A235A"
+        data-color-units="red"
+        data-color-numbers="blue"
         data-color-needle-start="rgba(240, 128, 128, 1)"
         data-color-needle-end="rgba(255, 160, 122, .9)"
         data-value-box="true"
@@ -156,10 +137,9 @@
         data-border-outer-width="3"
         data-border-middle-width="3"
         data-border-inner-width="3"
+		
 ></canvas></center>
-<center>   <pre>         <video id="video" width="380" height="240"  autoplay></video>                     <button onclick="document.location.reload()">Home</button><button onclick="animateGauges()">Animate</button><button onclick="stopGaugesAnimation()">Stop animation</button><button onclick="document.location.reload()">Reset</button>                      <a href="http://www.ewubd.edu/home/"><img src="rasa.png" alt="ewu_logo" width="250" height="230" border="0"></a></pre></center></pre>
-	
-
+<center>   <pre>         <iframe width="380" height="240" src="https://www.youtube.com/embed/XOacA3RYrXk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>    <a href="index_new.php"><button class="button">HOME</button></a><button class="button" onclick="animateGauges()">ANIMATE</button><button class="button" onclick="stopGaugesAnimation()">STOP ANIMATE</button><button class="button" onclick="document.location.reload()">RESET</button>                      <a href="http://www.ewubd.edu/home/"><img src="rasa.png" alt="ewu_logo" width="250" height="230" border="0"></a></pre></center></pre>
 <script>
 if (!Array.prototype.forEach) {
     Array.prototype.forEach = function(cb) {
